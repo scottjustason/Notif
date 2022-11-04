@@ -1,93 +1,119 @@
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-    
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-    
-    /* Modal Content */
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-    
-    /* The Close Button */
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    </style>
+    <link rel="stylesheet" href="modal-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+</head>
 <body>
 
-<h2>Modal Example</h2>
-
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+    <div class="container">
+        <div class="calendar">
+          <div class="front">
+            <div class="current-date">
+              <h1>Friday 15th</h1>
+              <h1>January 2016</h1> 
+            </div>
+  
+            <div class="current-month">
+              <ul class="week-days">
+                <li>MON</li>
+                <li>TUE</li>
+                <li>WED</li>
+                <li>THU</li>
+                <li>FRI</li>
+                <li>SAT</li>
+                <li>SUN</li>
+              </ul>
+  
+              <div class="weeks">
+                <div class="first">
+                  <span class="last-month">28</span>
+                  <span class="last-month">29</span>
+                  <span class="last-month">30</span>
+                  <span class="last-month">31</span>
+                  <span>01</span>
+                  <span>02</span>
+                  <span>03</span>
+                </div>
+  
+                <div class="second">
+                  <span>04</span>
+                  <span>05</span>
+                  <span class="event">06</span>
+                  <span>07</span>
+                  <span>08</span>
+                  <span>09</span>
+                  <span>10</span>
+                </div>
+  
+                <div class="third">
+                  <span>11</span>
+                  <span>12</span>
+                  <span>13</span>
+                  <span>14</span>
+                  <span class="active">15</span>
+                  <span>16</span>
+                  <span>17</span>
+                </div>
+  
+                <div class="fourth">
+                  <span>18</span>
+                  <span>19</span>
+                  <span>20</span>
+                  <span>21</span>
+                  <span>22</span>
+                  <span>23</span>
+                  <span>24</span>
+                </div>
+  
+                <div class="fifth">
+                  <span>25</span>
+                  <span>26</span>
+                  <span>27</span>
+                  <span>28</span>
+                  <span>29</span>
+                  <span>30</span>
+                  <span>31</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="back">
+            <h1>Date Selected</h1>
+            <div class="info">
+              <div class="date">
+                <p class="info-date">
+                Score <span>8.5</span>
+                </p>
+                <p class="info-time">
+                  Time of Entry: <span>6:35 PM</span>
+                </p>
+              </div>
+              <div class="observations">
+                <span>
+                  Paragraphs are the building blocks of papers. 
+                  Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. 
+                  In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. 
+                  A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). 
+                  Length and appearance do not determine whether a section in a paper is a paragraph. 
+                  For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. 
+                  Ultimately, a paragraph is a sentence or group of sentences that support one main idea. 
+                  In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.
+                </span>
+              </div>
+            </div>
+  
+            <div class="actions">
+              <button class="save">
+                Close <i class="ion-checkmark"></i>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+<script src="modal.js"></script>
 
 </body>
 </html>
